@@ -1,0 +1,54 @@
+:root{
+  --color1: #2E073F;
+  --color2: #7A1CAC;
+  --color3: #AD49E1;
+  --coror4: #EBD3F8;
+  --color5: #624E88;
+  --color6: #8967B3;
+  --coror7: #CB80AB;
+
+}
+.Header{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.Header .HeaderImage{
+  width: 20%;
+}
+.Header .HeaderImage img{
+  width: 30%;
+}
+.Header .HeaderLinks{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 60%;
+}
+.Header .HeaderLinks .links{
+  text-decoration: none;
+  color: var(--color1);
+}
+.Header .HeaderLinks .links:hover{
+  color: var(--color2);
+}
+
+.Header .HeaderSign{
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  column-gap: 2rem;
+}
+
+.Header .HeaderSign button{
+  background-color: var(--color1);
+  color: var(--coror4);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.Header .HeaderSign button:hover{
+  background-color: var(--color2);
+}
