@@ -1,54 +1,150 @@
-:root{
-  --color1: #2E073F;
-  --color2: #7A1CAC;
-  --color3: #AD49E1;
-  --coror4: #EBD3F8;
-  --color5: #624E88;
-  --color6: #8967B3;
-  --coror7: #CB80AB;
-
+:root {
+  --color1: #2e073f;
+  --color2: #7a1cac;
+  --color3: #ad49e1;
+  --color4: #ebd3f8;
+  --color5: #624e88;
+  --color6: #8967b3;
+  --color7: #cb80ab;
+  scroll-behavior: smooth;
 }
-.Header{
+.Header {
   display: flex;
   padding: 1rem;
   align-items: center;
 }
 
-.Header .HeaderImage{
+.Header .HeaderImage {
   width: 20%;
 }
-.Header .HeaderImage img{
+.Header .HeaderImage img {
   width: 30%;
 }
-.Header .HeaderLinks{
+.Header .HeaderRight {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.Header .HeaderRight .HeaderLinks {
   display: flex;
   list-style: none;
   justify-content: space-between;
   width: 60%;
 }
-.Header .HeaderLinks .links{
+.Header .HeaderRight .HeaderLinks .close,
+.Header .HeaderRight .hamburger {
+  display: none;
+}
+.Header .HeaderRight .HeaderLinks .links {
   text-decoration: none;
   color: var(--color1);
 }
-.Header .HeaderLinks .links:hover{
+.Header .HeaderRight .HeaderLinks .links:hover {
   color: var(--color2);
 }
 
-.Header .HeaderSign{
+.Header .HeaderRight .HeaderSign {
   display: flex;
   justify-content: flex-end;
-  width: 20%;
+  width: 40%;
   column-gap: 2rem;
 }
 
-.Header .HeaderSign button{
+.Header .HeaderRight .HeaderSign button {
   background-color: var(--color1);
-  color: var(--coror4);
+  color: var(--color4);
   border: none;
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
-.Header .HeaderSign button:hover{
+.Header .HeaderRight .HeaderSign button:hover {
   background-color: var(--color2);
+}
+
+@media screen and (max-width: 62.5em) {
+  .Header .HeaderImage {
+    width: 15%;
+  }
+  .Header .HeaderImage img {
+    width: 40%;
+  }
+  .Header .HeaderRight .HeaderLinks {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 44.375em) {
+  .Header {
+    justify-content: space-between;
+  }
+  .Header .HeaderRight {
+    justify-content: flex-end;
+  }
+  .Header .HeaderRight .HeaderLinks .close {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color1);
+    color: var(--color4);
+    display: grid;
+    place-content: center;
+    font-size: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0.2rem;
+    cursor: pointer;
+  }
+  .Header .hamburger {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color1);
+    color: var(--color4);
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .Header .HeaderRight .HeaderLinks .close,
+  .Header .HeaderRight .hamburger {
+    display: initial;
+  }
+  .Header .HeaderRight {
+    position: absolute;
+    padding: 2rem;
+    top: -1rem;
+    right: -280px;
+    width: 220px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+  .Header .HeaderRight.active {
+    right: 0;
+  }
+  .Header .HeaderRight .HeaderSign,
+  .Header .HeaderRight .HeaderLinks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Header .HeaderRight .HeaderSign {
+    gap: 2rem;
+  }
+  .Header .HeaderRight .HeaderLinks li{
+    padding: 20px 0 20px 40px;
+    margin-left: 0;
+  }
+  .Header .HeaderRight .HeaderLinks li .links{
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px;
+  }
+
 }
