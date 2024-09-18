@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
+import TechNews from "../../Pages/TechNews";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
