@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./assets/global.css";
-import TechNews from "./Pages/TechNews";
+import TechNews from "./Pages/TechNews/TechNews";
 
 function App() {
   return (
