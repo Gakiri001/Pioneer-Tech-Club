@@ -33,7 +33,7 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link className="links" to="/">
+              <Link className="links" to="/Event">
                 Events
               </Link>
             </li>
