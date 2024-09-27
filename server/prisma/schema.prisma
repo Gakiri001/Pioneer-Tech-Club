@@ -19,7 +19,7 @@ model event{
   description String @map("description")
   trainer String @map("trainer")
   date DateTime @map("date")
-  time DateTime @map("time")
+  time String @map("time")
   venue String @map("venue")
 
   @@map("event_table")
