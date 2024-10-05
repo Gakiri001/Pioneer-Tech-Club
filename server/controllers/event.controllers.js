@@ -40,3 +40,51 @@ export const getEvents = async (req,res) => {
     res.status(500).json({success:false, message:"Server Failed"})
   }
 }
+
+export const updateEvent = async (req, res) => {
+  const{title,description, trainer, date, time, venue} = req.body
+  const id = req.params.id
+  try {
+    let updateEventinfo;
+    if(title){
+      updateEventinfo = await prisma.event.update({
+        where: {id:id},
+        data:{title: title},
+      });
+    }
+    if(description){
+      updateEventinfo = await prisma.event.update({
+        where:{id:id},
+        data:{description:description},
+      })
+    }
+    if(trainer){
+      updateEventinfo = await prisma.event.update({
+        where:{id:id},
+        data:{trainer:trainer},
+      })
+    }
+    if(date){
+      updateEventinfo = await prisma.event.update({
+        where:{id:id},
+        data:{date:date},
+      })
+    }
+    if(time){
+      updateEventinfo = await prisma.event.update({
+        where:{id:id},
+        data:{time:time},
+      })
+    }
+    if(venue){
+      updateEventinfo = await prisma.event.update({
+        where:{id:id},
+        data:{venue:venue},
+      })
+    }
+    res.status(200).json({success:true, message:"Event updated successfully"})
+    
+  } catch (error) {
+    res.status(500).json({success:false,message:error.message})
+  }
+}
