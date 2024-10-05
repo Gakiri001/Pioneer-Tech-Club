@@ -31,7 +31,7 @@ function TechNews() {
   }
 
   if(error){
-    return <div>Error: {error}</div>
+    return <div>Error: {error}, connect to internet</div>
   }
 
 

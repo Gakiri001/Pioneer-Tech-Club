@@ -25,9 +25,18 @@ export const createEvent = async (req,res) => {
         venue: true, 
       },
     })
-    res.status(201).json({success:true, message: "event created successfully"})
+    res.status(201).json({success:true, event})
   }
   catch(err){
     res.status(500).json({success:false, message:"Server failed"})
+  }
+}
+
+export const getEvents = async (req,res) => {
+  try {
+    const eventDetails = await prisma.event.findMany();
+    res.status(200).json({success:true, eventDetails})
+  } catch (error) {
+    res.status(500).json({success:false, message:"Server Failed"})
   }
 }
