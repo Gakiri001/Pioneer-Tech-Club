@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import "./TechNews.css"
 
 function TechNews() {
   const[news, setNews] = useState([])
@@ -10,6 +11,7 @@ function TechNews() {
       const apiURL = `https://newsapi.org/v2/top-headlines?category=technology&apiKey=44c6b76305bb43bb8518cf0dc9ffcaca`
 
       try {
+        setLoading(true)
         const response = await fetch(apiURL)
         console.log(response)
         if(!response.ok){
@@ -36,16 +38,18 @@ function TechNews() {
 
 
   return (
-    <div>
-      <h1>Tech News</h1>
+    <div className='news'>
+      <div className='NewsHeader'><h1>Tech News</h1></div>
       <ul>
-        {news.map((article, index) =>(
+        {news
+        .filter(article => article.urlToImage && article.title && article.description)
+        .map((article, index) =>(
           <li key={index}>
-            <img src={article.urlToImage} alt="" />
+            <img src={article.urlToImage} alt={article.title}/>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
             <a href={article.url} target='_blank'>Read More</a>
-            <p>{article.publishedAt}</p>
+            <p>{ new Date(article.publishedAt).toLocaleDateString()}</p>
           </li>
         ))}
       </ul>
