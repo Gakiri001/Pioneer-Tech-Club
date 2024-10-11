@@ -61,3 +61,21 @@
 .news ul li a{
   color: var(--color4);
 }
+@media screen and (max-width: 48.75em) {
+  .news ul li{
+    width: 45%;
+  }
+}
+@media screen and (max-width: 48.75em) {
+  .news ul li h2{
+    font-size: 16px;
+  }
+  .news ul li p{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 48.75em) {
+  .news ul li{
+    width: 90%;
+  }
+}
