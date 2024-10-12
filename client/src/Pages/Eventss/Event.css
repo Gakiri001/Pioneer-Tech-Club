@@ -1,0 +1,15 @@
+.Event {
+  padding: 1rem;
+  background-color: var(--color2);
+}
+.Event .EventWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.Event .EventWrapper .EventCard {
+  width: 45%;
+  background-color: var(--color3);
+}

@@ -54,8 +54,8 @@ function Header() {
           </div>
         </div>
         <div id="menu-btn" className="hamburger" onClick={handleMenuOpen}>
-            <GiHamburgerMenu />
-          </div>
+          <GiHamburgerMenu />
+        </div>
       </div>
     </>
   );
