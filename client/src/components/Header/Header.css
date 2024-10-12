@@ -121,7 +121,7 @@
     position: absolute;
     padding: 2rem;
     top: -1rem;
-    right: -280px;
+    right: -100%;
     width: 220px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -132,6 +132,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     transition: 0.3s ease;
+    overflow: hidden;
   }
   .Header .HeaderRight.active {
     right: 0;
