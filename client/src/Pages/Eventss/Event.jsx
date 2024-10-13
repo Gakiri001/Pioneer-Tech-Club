@@ -36,7 +36,7 @@ function Event() {
 
   return (
     <div className="Event">
-      <div>
+      <div className="EventHeader">
         <h1>Events</h1>
       </div>
       <div className="EventWrapper">
@@ -55,29 +55,30 @@ function Event() {
             </div>
             <div className="EventCard3">
               <div className="detail">
-                <p>
+                <p className="detailsvg">
                   <MdOutlineSecurity />
                 </p>
-                <p>{new Date(current.date).toLocaleDateString()}</p>
+                <p className="detailpara">{new Date(current.date).toLocaleDateString()}</p>
               </div>
 
-              <div>
-                <p>
+              <div className="detail">
+                <p className="detailsvg">
                   <MdOutlineSecurity />
                 </p>
-                <p>{current.trainer}</p>
+                <p className="detailpara">{current.trainer}</p>
               </div>
-              <div></div>
-              <p>
-                <MdOutlineSecurity />
-              </p>
-              <p>{current.venue}</p>
+              <div className="detail">
+                <p className="detailsvg">
+                  <MdOutlineSecurity />
+                </p>
+                <p className="detailpara">{current.venue}</p>
+              </div>
             </div>
-            <div>
+            <div className="EventCard4">
               <p>{current.description}</p>
             </div>
             <div className="Eventcard5">
-              <p className="svg">
+              <p className="Bottomsvg">
                 <MdOutlineSecurity />
               </p>
               <a href="">Book a sit</a>

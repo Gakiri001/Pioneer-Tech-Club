@@ -1,6 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap");
+:root {
+  --color1: #2e073f;
+  --color2: #7a1cac;
+  --color3: #ad49e1;
+  --color4: #ebd3f8;
+  --color5: #624e88;
+  --color6: #8967b3;
+  --color7: #cb80ab;
+  scroll-behavior: smooth;
+}
 .Event {
   padding: 1rem;
-  background-color: var(--color2);
 }
 .Event .EventWrapper {
   display: flex;
@@ -11,5 +21,99 @@
 }
 .Event .EventWrapper .EventCard {
   width: 45%;
-  background-color: var(--color3);
+  background: linear-gradient(rgba(46, 7, 63, 0.5), rgba(46, 7, 63, 0.5)),
+    url("../../assets/event1.jpg");
+  padding: 1rem;
+  border-radius: 10px;
+}
+.Event .EventWrapper .EventCard .EventCard1 {
+  display: flex;
+  justify-content: space-between;
+}
+.Event .EventWrapper .EventCard .EventCard1 .svg {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-size: 25px;
+}
+.Event .EventWrapper .EventCard .EventCard2 h2 {
+  text-align: center;
+  font-size: 35px;
+  font-family: "Edu AU VIC WA NT Guides", sans-serif;
+  font-style: italic;
+  color: var(--color4);
+}
+.Event .EventWrapper .EventCard .EventCard3 {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+  background-color: rgba(46, 7, 63, 0.8);
+  padding: 0.5rem;
+  border-radius: 70px;
+}
+.Event .EventWrapper .EventCard .EventCard3 .detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Event .EventWrapper .EventCard .EventCard3 .detail .detailsvg{
+  width: 40px;
+  height: 40px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-size: 20px;
+}
+.Event .EventWrapper .EventCard .EventCard3 .detail .detailpara{
+  margin-top: 1rem;
+  color: var(--color4);
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+}
+.Event .EventWrapper .EventCard .EventCard4{
+  text-align: center;
+  font-size: 20px;
+  font-family: "Edu AU VIC WA NT Guides", sans-serif;
+  font-style: italic;
+  color: var(--color4);
+}
+.Event .EventWrapper .EventCard .Eventcard5{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  align-items: center;
+}
+.Event .EventWrapper .EventCard .Eventcard5 .Bottomsvg{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-size: 25px;
+}
+.Event .EventWrapper .EventCard .Eventcard5 a{
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: var(--color2);
+  color: var(--color4);
+  border-radius: 10px;
+}
+.Event .EventWrapper .EventCard .Eventcard5 h5{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color2);
+  color: var(--color4);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-size: 12px;
 }
